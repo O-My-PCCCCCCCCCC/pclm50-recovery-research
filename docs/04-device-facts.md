@@ -1,6 +1,6 @@
 # 04 · 设备实测事实清单（OPPO PCLM50）
 
-> 全部数据来自设备实测读取（`adb` + Magisk/APatch root + `/proc` + EDL 全盘备份），非查阅资料。
+> 全部数据来自设备实测读取（`adb` + Magisk/APatch root + `/proc` + 全盘镜像备份），非查阅资料。
 > 可直接作为同类 OPPO/高通设备的对照参考。
 
 ## 1. 身份

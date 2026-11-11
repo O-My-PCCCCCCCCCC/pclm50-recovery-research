@@ -1,26 +1,48 @@
-MIT License
+# 使用许可（非商业 · 仅供个人学习）
 
-Copyright (c) 2026 PCLM50 Research contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+版权所有 (c) 2026 PCLM50 Research contributors
 
 ---
 
-文中引用的内核源码版权归 OPPO / 高通 / Linux 内核社区所有。
-文中引用的第三方工具（APatch / KernelPatch / TWRP 等）版权归各自作者所有。
+## 你可以做的
+
+- ✅ **个人学习、研究、技术交流**：阅读、复制、修改本文档与脚本
+- ✅ **在自己拥有的设备上**按本文档操作
+- ✅ **转载、翻译、二次创作**，但必须：
+  - 保留本许可文件
+  - 注明出处（原仓库地址）
+  - 采用**同样的非商业许可**分发（相同方式共享）
+- ✅ 在论坛/博客/视频中引用本文档的**结论与技术细节**（请附原仓库链接）
+
+## 你不可以做的
+
+- ❌ **任何形式的商业使用**。包括但不限于：
+  - 用于收费维修、收费刷机、收费解锁服务
+  - 集成进商业产品或付费工具
+  - 用于付费课程、付费社群、付费咨询
+  - 用于吸引流量后变现（广告分成、带货、导流付费）
+- ❌ 去除署名或伪造作者
+- ❌ 改以商业许可（包括但不限于 MIT / Apache / GPL）再分发
+- ❌ 用于批量破解、贩售解锁服务或其他侵犯他人权益的用途
+
+## 免责声明
+
+本文档记录的是**在自己拥有的设备上**的实测过程。**照做可能导致设备变砖、数据丢失、保修失效。**
+
+- 作者不对任何人因使用本文档造成的任何直接或间接损失负责
+- 所有操作风险**由操作者自行承担**
+- 文中涉及的内核源码版权归 **OPPO / 高通 / Linux 内核社区** 所有
+- 文中涉及的第三方工具（APatch / KernelPatch / TWRP 等）版权归**各自作者**所有，使用须遵守其各自许可
+
+## 关于本许可的性质
+
+本许可**不是** OSI 认可的开源许可（开源许可不允许限制使用领域）。
+它是一个**源码公开 + 非商业限制**的许可。
+
+因此 GitHub 不会为本仓库显示开源许可证徽章 —— 这是预期的，不是配置错误。
+
+如需将其中代码用于商业场景，请自行联系原作者取得授权，或**仅参考其技术思路自行实现**。
+
+---
+
+**简而言之：随便学，随便改，别拿去赚钱，注明出处。**

@@ -8,6 +8,62 @@
 
 ---
 
+## ⚠️ 授权声明
+
+**本仓库仅供个人学习、研究、技术交流使用。**
+
+- ❌ **禁止任何形式的商业使用**（收费维修 / 收费刷机 / 收费解锁 / 商业产品 / 付费课程 / 变现引流 等）
+- ✅ 转载或二次创作请**注明原仓库地址**并采用**同样的非商业许可**
+- ⚠️ 所有操作风险自负，作者不对任何设备损坏或数据丢失负责
+- 完整条款见 [`LICENSE`](LICENSE)
+
+---
+
+## 🔍 关键词 / Keywords
+
+> 本节同时用于帮助需要这些信息的人**通过搜索找到本仓库**。如果你在查下面任何一个问题，这里就是答案。
+
+**现象类（你看到的现象）**
+
+- `系统文件被破坏，无法开机` · `请安装正确的系统软件或联系售后处理`
+- `The current image(boot/recovery) have been destroyed and can not boot`
+- 刷第三方 recovery（TWRP / PBRP / OrangeFox）后**进不了 recovery，系统却正常**
+- 把 `vbmeta` 改成 `--disable-verity --disable-verification`（flags `0x00`→`0x03`）**依然起不来**
+- `insmod: failed to insert module` · `Loading of unsigned module is rejected` · `EKEYREJECTED`
+- `disagrees about version of symbol module_layout`（符号 CRC 不匹配）
+- `version magic '...' should be '...'`（vermagic 版本魔法不匹配）
+- 内核模块（`.ko`）加载不了 / APatch 的 Zygisk、LSPosed、Xposed 突然全失效
+- 模块**莫名其妙全部变成"已禁用"**，找不到是谁干的
+
+**设备 / 平台类**
+
+`OPPO PCLM50` · `PCLM50` · `Reno3 元气版` · `Reno3 Young 5G` · `OPPO K7` · `OPPO K9` · `project 19125`
+`Qualcomm lito` · `SM7250` · `骁龙 765G` · `sdm765` · `arm64` · `ColorOS 11` · `Android 11`
+`ro.product.device=OP4AB5` · `ro.product.sku=19125`
+
+**技术概念类**
+
+- **引导层**：`little kernel` `lk` `abl` `bootloader` `verifiedbootstate` `orange` `green`
+  `androidboot.vbmeta.size` `androidboot.vbmeta.digest` `AVB` `avbtool` `add_hash_footer`
+  `AVBf footer` `original_image_size` `vbmeta_offset` `recoverybak`（**回退分区**）`bootonce-bootloader`
+- **内核模块**：`CONFIG_MODULE_SIG` `CONFIG_MODULE_SIG_FORCE` `CONFIG_MODVERSIONS`
+  `sig_enforce` `bool_enable_only` `vermagic` `check_modinfo` `same_magic` `MODULE_FORCE_LOAD`
+  `kernel module signature bypass` `load unsigned module`
+- **内核构建**：`android_kernel_oppo_sm7250` `android_kernel_modules_and_devicetree_oppo_sm7250`
+  `kernel_msm-4.19` `lito-perf_defconfig` `OplusKernelEnvConfig` `OplusKernelEnvConfig.mk`
+  `techpack` `techpack/Kbuild` `defconfig` `mkbootimg` `boot image header v2`
+  `clang-r383902` `CROSS_COMPILE_ARM32` `gcc-wrapper.py`
+- **root / hook**：`APatch` `KernelPatch` `KPM` `kpm-rootstealth` `kpm-netlink-guard`
+  `selinux_MAF` `Zygisk Next` `zygisksu` `Vector` `LSPosed` `Magisk 域名`
+
+**中文口语化搜法**
+
+"刷了第三方recovery进不去" · "系统文件被破坏无法开机怎么办" · "OPPO 刷机 提示系统文件被破坏"
+· "怎么让安卓加载自己的ko" · "安卓内核模块签名校验怎么绕过" · "OPPO 内核源码怎么编译"
+· "APatch KPM 怎么用" · "手机模块全部被禁用" · "OPPO 9008 之后 recovery 起不来"
+
+---
+
 ## 一句话结论
 
 | 目标 | 结果 | 卡在哪 |
@@ -181,7 +237,7 @@ KPM 能做的事和 `.ko` 几乎一样（hook 系统调用、改内核数据结�
 
 ## ⚠️ 免责声明
 
-本文档记录的是**在自己拥有的设备上**的实测过程。包含解锁 Bootloader、修改分区、反编译分析等内容。
+本文档记录的是**在自己拥有的设备上**的实测过程。包含修改分区、镜像分析等内容。
 
 - 所有分区写操作前都做了原始镜像备份并记录 md5，全程只动过 `recovery` / `vbmeta` / `misc` 三个分区
 - 设备最终**完整恢复原厂状态**（回读 md5 与原厂逐字节一致）

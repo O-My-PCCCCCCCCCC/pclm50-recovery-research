@@ -78,7 +78,6 @@ run_one(){  # $1 = 候选名(不含 .bin)
         22d9:2769) verdict="RECOVERY-ADB-UP(USB已枚举)"; break;;
         22d9:2765) verdict="ANDROID-回退(未进recovery)"; break;;
         22d9:*)    verdict="OPPO-其他模式 $u"; break;;
-        05c6:9008) verdict="EDL9008"; break;;
       esac
     fi
     sleep 5

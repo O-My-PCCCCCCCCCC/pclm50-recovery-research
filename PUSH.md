@@ -70,12 +70,38 @@ git push -f -u origin main      # 已推送过才需要 -f
 
 建好仓库后建议在 GitHub 网页上加：
 
-- **Topics**（标签，决定别人能不能搜到你）：
-  `android` `oppo` `qualcomm` `sm7250` `lito` `bootloader` `avb` `lk` `kernel-module`
-  `kernel-build` `twrp` `recovery` `apatch` `reverse-engineering` `pclm50`
+- **Topics**（标签，决定别人能不能搜到你）—— 一次性粘贴下面这一行到 Topics 输入框（逗号分隔，每粘贴一个会变成独立标签）：
+
+  ```
+  android,oppo,qualcomm,sm7250,lito,bootloader,avb,lk,kernel-module,kernel-build,twrp,recovery,apatch,kernelpatch,reverse-engineering,pclm50,reno3,verified-boot,vermagic,kernel-signature
+  ```
+
+  > GitHub 的 Topics 上限是 20 个，上面正好 20 个。优先保这 5 个（搜索量最大）：
+  > `pclm50` `sm7250` `bootloader` `kernel-module` `twrp`
 - **About → Website**：可留空
 - **Releases**：把 `PCLM50-逆向实测记录-20261111.tar.gz`（307 KB）作为附件挂一个 release，
   方便别人一次性下载全部资料
+
+## 找不到 Topics 在哪？
+
+**路径一（推荐）**：打开仓库首页 → 看**右侧栏**（窄屏在下方）→ 找到 **About** 标题 → 点它右边的**齿轮图标 ⚙** → 弹出框里就有 **Topics** 输入框
+
+**路径二**：直接访问 `https://github.com/<你的用户名>/pclm50-recovery-research` 后按上述找 About 齿轮
+
+**路径三**：仓库 → Settings → 页面最下方 **Features** 区域也能找到 Topics
+
+> 注意：Topics **不在** Settings 的常规位置，它是 About 弹窗里的。手机浏览器需要把页面拉到最底下才看得到 About。
+
+## 找不到 Releases 在哪？
+
+直接访问（需已登录）：
+```
+https://github.com/<你的用户名>/pclm50-recovery-research/releases/new
+```
+
+或者：仓库首页 → 右侧栏 → **Releases** → 右侧 **Create a new release**
+
+> 如果访问 `/releases/new` 报 404，通常是因为**还没登录**，或者仓库名拼错。
 
 ## 一个安全提醒
 
