@@ -353,3 +353,56 @@ adb shell cat /proc/modules
 2. **版本跨度**：4.19.157 跑在 ColorOS 11 上可能起不来或部分功能异常
 3. **安全**：关掉签名强制 + 放开 vermagic 后，**任何拿到 root 的程序都能把任意代码塞进内核**。这是代价，不是漏洞
 4. **OTA**：刷了自编内核后不要接受系统更新
+__sess_status=$?; __t="__SESSION_EXIT_"; printf '\n%s%s:%s__\n' "$__t" "be46c1cc" "$__sess_status"
+
+---
+
+## 补记（2026-11-11 复查）：卡点 10 的真正根因与正解
+
+上一轮把失败归因为"make 变量得由上层构建系统传"，方向对了一半，**根因找错了**。
+
+### 根因
+
+内核树 `Makefile` 只有这一行（12.1 树第 473 行 / 4.19.113 R 树第 456 行）：
+
+```make
+-include OplusKernelEnvConfig.mk
+```
+
+**从未 include `oplus_native_features.mk`** —— 而后者才是 OPPO 官方 CI 生成的那份开关清单
+（222 行，形如 `OPLUS_FEATURE_SECURE_GUARD=yes` … `TARGET_PRODUCT=lito`）。
+`OplusKernelEnvConfig.mk` 只负责把宏塞进 `KBUILD_CFLAGS`，**变量本身要由这份清单提供**。
+
+于是 `OPLUS_FEATURE_*` 全部为空 → `ifeq ($(X),yes)` 判假 → 私有驱动目录不参与编译 →
+调用方编了、提供方没编 → 一堆 `undefined reference`。
+
+### 为什么"命令行传变量"是错的
+
+make 的命令行变量**优先级高于 Makefile 内的 `:=`/`+=` 赋值**。把
+`OPLUS_CONNECTIVITY_NATIVE_FEATURE_SET=yes` 传进去，`:=` 定的名字列表就被覆盖成单词 `yes`，
+`foreach` 遍历它展开成 `-Dyes`；传 `=1` 则得到 `-D1` —— 这正是 `#define 1 1` 的来源。
+
+### 正解
+
+1. 把官方清单提取成 `scripts/oplus_vars.mk`（本仓库已附，225 行，来源
+   `oppo-source/android_kernel_oppo_sm7250@oppo/sm7250_s_12.1_reno4_5g:oplus_native_features.mk`）
+2. 拷到内核树根，在 `Makefile` 的 `-include OplusKernelEnvConfig.mk` **上一行**加：
+   ```make
+   -include oplus_vars.mk
+   ```
+   顺序很重要：必须先赋变量，`OplusKernelEnvConfig.mk` 才能用 `ifeq` 判断。
+3. 不要从命令行传任何 `OPLUS_*` 变量。
+
+### 其余三个卡点的一键补丁
+
+| 卡点 | 修法 |
+|---|---|
+| 8 `techpack/Kbuild` 不匹配软链 | `find ... -type d` 改成 `\( -type d -o -type l \)` |
+| 6 `gcc-wrapper` 强制 | 注释 `Makefile` 里 `CC = $(PYTHON) $(srctree)/scripts/gcc-wrapper.py $(REAL_CC)` |
+| 11 section mismatch | `./scripts/config --file out/.config --enable SECTION_MISMATCH_WARN_ONLY` |
+
+### 附带结论：不要为对齐版本换 R 树
+
+`oppo-source/kernel_msm-4.19` 的 `reno5-r-g`/`reno5-r-c` 实测为 `4.19.113`（与设备一致），
+但**组织内没有 sm7250 的 R 分支驱动/设备树仓库**（`19125` 即 PCLM50 的设备树只在 S 分支）。
+换过去等于把卡点 2 的 113 处 Kconfig 引用重走一遍。先把这棵已编通 2831 个 `.o` 的树收尾。
