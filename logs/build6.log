@@ -1,0 +1,89 @@
+awk: 命令行:1: (FILENAME=- FNR=1) 致命错误：试图访问字段 -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19, dir is , wakelock_dir is "
+lowmem_dbg mtk_ion use kernel 4.19
+WARNING: modpost: Found 1 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'
+kernel/fork.o: In function `copy_process':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../kernel/fork.c:2306: undefined reference to `update_user_tasklist'
+mm/vmscan.o: In function `shrink_page_list':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../mm/vmscan.c:1186: undefined reference to `is_reclaim_should_cancel'
+drivers/soc/qcom/fsa4480-i2c.o: In function `fsa4480_switch_event':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/soc/qcom/fsa4480-i2c.c:393: undefined reference to `get_main_display'
+drivers/soc/oplus/system/theia/black_screen_check.o: In function `black_screen_check_init':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/soc/oplus/system/theia/black_screen_check.c:354: undefined reference to `msm_drm_register_client'
+drivers/soc/oplus/system/theia/bright_screen_check.o: In function `bright_screen_check_init':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/soc/oplus/system/theia/bright_screen_check.c:414: undefined reference to `msm_drm_register_client'
+drivers/soc/oplus/sensor/oplus_ssc_interact/oplus_ssc_interact.o: In function `ssc_interactive_exit':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/soc/oplus/sensor/oplus_ssc_interact/oplus_ssc_interact.c:363: undefined reference to `unregister_lcdinfo_notifier'
+drivers/soc/oplus/sensor/oplus_ssc_interact/oplus_ssc_interact.o: In function `ssc_interactive_init':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/soc/oplus/sensor/oplus_ssc_interact/oplus_ssc_interact.c:332: undefined reference to `register_lcdinfo_notifier'
+drivers/soc/oplus/sensor/oplus_sensor_feedback/sensor_feedback.o: In function `sensor_sleep_ratio_init':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/soc/oplus/sensor/oplus_sensor_feedback/sensor_feedback.c:891: undefined reference to `msm_drm_register_client'
+drivers/soc/oplus/owakelock/oplus_wakelock_profiler.o: In function `wakelock_statistics_function_init':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/soc/oplus/owakelock/oplus_wakelock_profiler.c:642: undefined reference to `msm_drm_register_client'
+drivers/block/zram/hybridswap/hybridswap_swapd.o: In function `swapd_init':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/block/zram/hybridswap/hybridswap_swapd.c:1927: undefined reference to `msm_drm_register_client'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/block/zram/hybridswap/hybridswap_swapd.c:1954: undefined reference to `msm_drm_unregister_client'
+drivers/block/zram/hybridswap/hybridswap_swapd.o: In function `swapd_exit':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/block/zram/hybridswap/hybridswap_swapd.c:1966: undefined reference to `msm_drm_unregister_client'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_comp_scsi_upiu':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:3754: undefined reference to `ufsf_change_read10_debug_lun'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:3755: undefined reference to `ufsf_prep_fn'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_suspend':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:10876: undefined reference to `ufsf_hpb_suspend'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:11018: undefined reference to `ufsf_resume'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_resume':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:11146: undefined reference to `ufsf_resume'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_remove':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:11430: undefined reference to `ufsf_remove'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:11431: undefined reference to `remove_ufsplus_ctrl_proc'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:11435: undefined reference to `remove_signal_quality_proc'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_init':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:11736: undefined reference to `ufsf_set_init_state'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:11740: undefined reference to `create_signal_quality_proc'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_check_errors':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:7984: undefined reference to `recordUniproErr'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:7978: undefined reference to `recordUniproErr'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_update_uic_error':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:7873: undefined reference to `recordUniproErr'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:7903: undefined reference to `recordUniproErr'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:7928: undefined reference to `recordUniproErr'
+drivers/scsi/oufs/ufshcd.o:/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:7939: more undefined references to `recordUniproErr' follow
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_host_reset_and_restore':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:8532: undefined reference to `ufsf_reset_host'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_probe_hba':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:9664: undefined reference to `ufsf_reset'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:9634: undefined reference to `ufsf_device_check'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:9635: undefined reference to `ufsf_init'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_transfer_rsp_status':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:6623: undefined reference to `ufsf_hpb_noti_rb'
+drivers/scsi/oufs/ufshcd.o: In function `__ufshcd_transfer_req_compl':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:6911: undefined reference to `ufsf_on_idle'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_devfreq_scale':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:1879: undefined reference to `ufsf_tw_enable'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_query_ioctl':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:9788: undefined reference to `ufsf_check_query'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:9789: undefined reference to `ufsf_query_ioctl'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_eh_device_reset_handler':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:8307: undefined reference to `ufsf_reset_lu'
+drivers/scsi/oufs/ufshcd.o: In function `ufshcd_slave_configure':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufshcd.c:6444: undefined reference to `ufsf_slave_configure'
+drivers/scsi/oufs/ufs-sysfs.o: In function `latency_hist_show':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufs-sysfs.c:255: undefined reference to `io_latency_hist_show'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufs-sysfs.c:257: undefined reference to `io_latency_hist_show'
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/scsi/oufs/ufs-sysfs.c:259: undefined reference to `io_latency_hist_show'
+drivers/input/touchscreen/oplus_touchscreen/touchpanel_common_driver.o: In function `register_common_touch_device':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/input/touchscreen/oplus_touchscreen/touchpanel_common_driver.c:7609: undefined reference to `msm_drm_register_client'
+drivers/input/oplus_fp_drivers/goodix_optical_fp/gf_spi.o: In function `gf_probe':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/input/oplus_fp_drivers/goodix_optical_fp/gf_spi.c:837: undefined reference to `msm_drm_register_client'
+drivers/input/oplus_fp_drivers/anc_driver/jiiov_platform.o: In function `anc_probe':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/input/oplus_fp_drivers/anc_driver/jiiov_platform.c:1047: undefined reference to `msm_drm_register_client'
+drivers/input/oplus_fp_drivers/anc_driver/jiiov_platform.o: In function `anc_remove':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/input/oplus_fp_drivers/anc_driver/jiiov_platform.c:1103: undefined reference to `msm_drm_unregister_client'
+drivers/power/oplus/oplus_charger.o: In function `oplus_chg_init':
+/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/out/../drivers/power/oplus/oplus_charger.c:2500: undefined reference to `msm_drm_register_client'
+make[1]: *** [/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/Makefile:1256：vmlinux] 错误 1
+make[1]: 由于错误目标“Image”并未重新制作。
+make: *** [Makefile:146：sub-make] 错误 2
+make: 由于错误目标“Image”并未重新制作。

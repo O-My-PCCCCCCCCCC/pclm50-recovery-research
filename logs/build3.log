@@ -1,0 +1,51 @@
+awk: 命令行:1: (FILENAME=- FNR=1) 致命错误：试图访问字段 -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19, dir is , wakelock_dir is "
+../kernel/time/alarmtimer.c:39:10: fatal error: 'soc/oplus/oplus_wakelock_profiler.h' file not found
+#include <soc/oplus/oplus_wakelock_profiler.h>
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[3]: *** [../scripts/Makefile.build:338：kernel/time/alarmtimer.o] 错误 1
+make[3]: 由于错误目标“__build”并未重新制作。
+make[2]: *** [../scripts/Makefile.build:642：kernel/time] 错误 2
+../drivers/base/power/wakeup.c:31:10: fatal error: 'soc/oplus/oplus_wakelock_profiler.h' file not found
+#include <soc/oplus/oplus_wakelock_profiler.h>
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[4]: *** [../scripts/Makefile.build:338：drivers/base/power/wakeup.o] 错误 1
+make[4]: 由于错误目标“__build”并未重新制作。
+make[3]: *** [../scripts/Makefile.build:642：drivers/base/power] 错误 2
+make[3]: 由于错误目标“__build”并未重新制作。
+make[2]: *** [../scripts/Makefile.build:642：drivers/base] 错误 2
+../drivers/irqchip/irq-gic-v3.c:48:10: fatal error: 'soc/oplus/oplus_wakelock_profiler.h' file not found
+#include <soc/oplus/oplus_wakelock_profiler.h>
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[3]: *** [../scripts/Makefile.build:338：drivers/irqchip/irq-gic-v3.o] 错误 1
+make[3]: 由于错误目标“__build”并未重新制作。
+make[2]: *** [../scripts/Makefile.build:642：drivers/irqchip] 错误 2
+../net/oplus_nwpower/oplus_nwpower.c:25:10: fatal error: 'soc/oplus/oplus_wakelock_profiler.h' file not found
+#include <soc/oplus/oplus_wakelock_profiler.h>
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[3]: *** [../scripts/Makefile.build:339：net/oplus_nwpower/oplus_nwpower.o] 错误 1
+make[3]: 由于错误目标“__build”并未重新制作。
+make[2]: *** [../scripts/Makefile.build:642：net/oplus_nwpower] 错误 2
+make[2]: 由于错误目标“__build”并未重新制作。
+make[1]: *** [/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/Makefile:1276：net] 错误 2
+lowmem_dbg mtk_ion use kernel 4.19
+../drivers/soc/qcom/qcom_ipcc.c:16:10: fatal error: 'soc/oplus/oplus_wakelock_profiler.h' file not found
+#include <soc/oplus/oplus_wakelock_profiler.h>
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[4]: *** [../scripts/Makefile.build:338：drivers/soc/qcom/qcom_ipcc.o] 错误 1
+make[4]: 由于错误目标“__build”并未重新制作。
+make[3]: *** [../scripts/Makefile.build:642：drivers/soc/qcom] 错误 2
+make[3]: 由于错误目标“__build”并未重新制作。
+make[2]: *** [../scripts/Makefile.build:642：drivers/soc] 错误 2
+make[2]: 由于错误目标“__build”并未重新制作。
+make[1]: *** [/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/Makefile:1276：drivers] 错误 2
+make[2]: 由于错误目标“__build”并未重新制作。
+make[1]: *** [/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/Makefile:1276：kernel] 错误 2
+make[1]: 由于错误目标“Image”并未重新制作。
+make: *** [Makefile:146：sub-make] 错误 2
+make: 由于错误目标“Image”并未重新制作。

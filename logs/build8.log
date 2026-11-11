@@ -1,0 +1,47 @@
+awk: 命令行:1: (FILENAME=- FNR=1) 致命错误：试图访问字段 -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19, dir is , wakelock_dir is "
+In file included from <built-in>:360:
+<command line>:4:9: error: macro name must be an identifier
+#define 1 1
+        ^
+<command line>:90:9: error: macro name must be an identifier
+#define 1 1
+        ^
+<command line>:177:9: error: macro name must be an identifier
+#define 1 1
+        ^
+3 errors generated.
+make[3]: *** [../scripts/Makefile.build:339：scripts/mod/empty.o] 错误 1
+In file included from <built-in>:360:
+<command line>:4:9: error: macro name must be an identifier
+#define 1 1
+        ^
+<command line>:90:9: error: macro name must be an identifier
+#define 1 1
+        ^
+<command line>:177:9: error: macro name must be an identifier
+#define 1 1
+        ^
+3 errors generated.
+make[3]: *** [../scripts/Makefile.build:136：scripts/mod/devicetable-offsets.s] 错误 1
+make[3]: 由于错误目标“__build”并未重新制作。
+make[2]: *** [../scripts/Makefile.build:642：scripts/mod] 错误 2
+make[2]: 由于错误目标“__build”并未重新制作。
+make[1]: *** [/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/Makefile:1292：scripts] 错误 2
+In file included from <built-in>:360:
+<command line>:4:9: error: macro name must be an identifier
+#define 1 1
+        ^
+<command line>:90:9: error: macro name must be an identifier
+#define 1 1
+        ^
+<command line>:177:9: error: macro name must be an identifier
+#define 1 1
+        ^
+3 errors generated.
+make[2]: *** [.././Kbuild:21：kernel/bounds.s] 错误 1
+make[2]: 由于错误目标“__build”并未重新制作。
+make[1]: *** [/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/Makefile:1326：prepare0] 错误 2
+make[1]: 由于错误目标“Image”并未重新制作。
+make: *** [Makefile:146：sub-make] 错误 2
+make: 由于错误目标“Image”并未重新制作。

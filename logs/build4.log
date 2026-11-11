@@ -1,0 +1,13 @@
+awk: 命令行:1: (FILENAME=- FNR=1) 致命错误：试图访问字段 -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19, dir is , wakelock_dir is "
+lowmem_dbg mtk_ion use kernel 4.19
+WARNING: modpost: Found 1 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'
+FATAL: modpost: Section mismatches detected.
+Set CONFIG_SECTION_MISMATCH_WARN_ONLY=y to allow them.
+make[2]: *** [../scripts/Makefile.modpost:114：vmlinux.o] 错误 1
+make[1]: *** [/mnt/工作区/pclm50-kernel/aosp/kernel/msm-4.19/Makefile:1256：vmlinux] 错误 2
+make[1]: 由于错误目标“Image”并未重新制作。
+make: *** [Makefile:146：sub-make] 错误 2
+make: 由于错误目标“Image”并未重新制作。

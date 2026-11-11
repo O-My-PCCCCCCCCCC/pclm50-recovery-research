@@ -1,0 +1,5 @@
+ls: /dev/graphics/: No such file or directory
+ls: /dev/fb*: No such file or directory
+total 0
+crw-rw-rw- 1 root graphics 226,   0 1970-08-08 09:56 card0
+crw-rw-rw- 1 root graphics 226, 128 1970-08-08 09:56 renderD128

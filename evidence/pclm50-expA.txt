@@ -1,0 +1,38 @@
+=== PCLM50 实验A ===
+脚本被 init 成功拉起
+__bionic_open_tzdata: couldn't find any tzdata when looking for Asia/Shanghai!
+date=Sat Aug  8 00:31:51 GMT 1970
+mode=recovery
+hardware=qcom
+bootdevice=1d84000.ufshc
+uid=0 pid=1555
+--- /dev/block/bootdevice/by-name (前5) ---
+ALIGN_TO_128K_1
+ALIGN_TO_128K_2
+DRIVER
+abl
+ablbak
+--- /dev/dri ---
+total 0
+__bionic_open_tzdata: couldn't find any tzdata when looking for Asia/Shanghai!
+crw-rw-rw- 1 root graphics 226,   0 1970-08-08 00:28 card0
+crw-rw-rw- 1 root graphics 226, 128 1970-08-08 00:28 renderD128
+--- 关键二进制 ---
+__bionic_open_tzdata: couldn't find any tzdata when looking for Asia/Shanghai!
+-rwxr-xr-x 1 root root 1775000 1970-01-01 00:00 /system/bin/init
+-rwxr-xr-x 1 root root 1463936 1970-01-01 00:00 /system/bin/linker64
+-rwxr-xr-x 1 root root    1146 2026-11-11 10:29 /system/bin/recovery
+-rwxr-xr-x 1 root root  318264 1970-01-01 00:00 /system/bin/sh
+--- 挂载表 ---
+rootfs / rootfs rw,seclabel,size=3628428k,nr_inodes=907107 0 0
+tmpfs /dev tmpfs rw,seclabel,nosuid,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,seclabel,relatime,mode=600,ptmxmode=000 0 0
+proc /proc proc rw,relatime,gid=3009,hidepid=2 0 0
+sysfs /sys sysfs rw,seclabel,relatime 0 0
+selinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0
+tmpfs /mnt tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,mode=755,gid=1000 0 0
+/dev/block/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,noatime,data=ordered 0 0
+tmpfs /apex tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,mode=755 0 0
+tmpfs /linkerconfig tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,mode=755 0 0
+tmpfs /mnt/installer tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,mode=755,gid=1000 0 0
+tmpfs /mnt/androidwritable tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,mode=755,gid=1000 0 0
